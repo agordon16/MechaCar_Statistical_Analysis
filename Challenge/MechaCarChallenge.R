@@ -13,3 +13,5 @@ summary(lm(mpg))
 suspensioncoil_table <- read.csv(file="Suspension_Coil.csv")
 # Create a total summary dataframe using summarize function
 total_summary <- suspensioncoil_table %>% summarize(Mean=mean(PSI), Median=median(PSI), Variance=var(PSI), StandardDev=sd(PSI) )
+#Create a lot summary dataframe using group by and summarize functions
+lot_summary <- suspensioncoil_table %>% group_by(Manufacturing_Lot) %>% summarize(Mean=mean(PSI), Median=median(PSI), Variance=var(PSI), StandardDev=sd(PSI))

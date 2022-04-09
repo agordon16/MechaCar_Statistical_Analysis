@@ -16,6 +16,7 @@ total_summary <- suspensioncoil_table %>% summarize(Mean=mean(PSI), Median=media
 #Create a lot summary dataframe using group by and summarize functions
 lot_summary <- suspensioncoil_table %>% group_by(Manufacturing_Lot) %>% summarize(Mean=mean(PSI), Median=median(PSI), Variance=var(PSI), StandardDev=sd(PSI))
 
+#Deliverable 3
 #Perform t-tests on overall table data and each lots
 t.test(suspensioncoil_table$PSI, mu=1500)
 #Lot 1

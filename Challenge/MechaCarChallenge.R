@@ -15,3 +15,19 @@ suspensioncoil_table <- read.csv(file="Suspension_Coil.csv")
 total_summary <- suspensioncoil_table %>% summarize(Mean=mean(PSI), Median=median(PSI), Variance=var(PSI), StandardDev=sd(PSI) )
 #Create a lot summary dataframe using group by and summarize functions
 lot_summary <- suspensioncoil_table %>% group_by(Manufacturing_Lot) %>% summarize(Mean=mean(PSI), Median=median(PSI), Variance=var(PSI), StandardDev=sd(PSI))
+
+#Perform t-tests on overall table data and each lots
+t.test(suspensioncoil_table$PSI, mu=1500)
+#Lot 1
+lot1 <- subset(suspensioncoil_table, Manufacturing_Lot =="Lot1")
+t.test(lot1$PSI, mu=1500)
+
+#Lot 2
+lot2 <- subset(suspensioncoil_table, Manufacturing_Lot =="Lot2")
+t.test(lot2$PSI, mu=1500)
+
+#Lot 3
+lot3 <- subset(suspensioncoil_table, Manufacturing_Lot =="Lot3")
+t.test(lot3$PSI, mu=1500)
+
+

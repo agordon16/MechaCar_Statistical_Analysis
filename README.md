@@ -1,13 +1,16 @@
 # MechaCar_Statistical_Analysis
 ## Linear Regression to Predict MPG
 1.	Which variables/coefficients provided a non-random amount of variance to the mpg values in  the dataset? 
+    
     Based on the linear regression performed, vehicle length and ground clearance provided a non-random amount of variance to the mpg values in the dataset.
 
 2.	Is the slope of the linear model considered to be zero? Why or why not? 
+    
     The slope of the line is not considered to be zero. Based on a p-value of 5.35e-11, we can reject the null hypothesis which states that the slope is equal to zero.
 
 
 3.	Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
+    
     The linear model does effectively predict the mpg of MechaCar prototypes based on an r-squared value of 0.7149.  This indicates that the model explains 71% of the variation.
 
  ![DEL1_Code](https://github.com/agordon16/MechaCar_Statistical_Analysis/blob/142a02246aac914768ee256edae59beca318bf6b/Images/Del1Code.jpg) 
@@ -62,7 +65,7 @@ In today’s climate, fuel efficiency and safety are two critical factors for co
 * Alternative hypothesis is that MechaCar’s fuel efficiency and safety ratings exceed those of their competitors.
 
 ### Statistical Tests
-Since we have already utilized one-sample t-tests and linear regression on the MechaCar data, following suit with competitor data would give us a good indication of how MechaCar stands up against their competition.
+Since we have already utilized one-sample t-tests and linear regression on the MechaCar data, utilizing a two-sample t-test with competitor data should give us a good indication of how MechaCar stands up against their competition.
 
 ### Data Needed
 While we already have mpg data for MechaCar, we would need to retrieve corresponding data for the competition along with safety ratings for both Mecha and their competitors.
